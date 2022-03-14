@@ -1,0 +1,122 @@
+1. github와 연동하려면 나의 git에 user.name / user.email이 같게 셋팅해야한다
+C:\Users\jjy96>git config --global user.name jjy961228
+
+C:\Users\jjy96>git config --global user.email jjy961228@naver.com
+
+제대로 변경됐나 확인해보기
+git config --list 
+
+2. git hub에 프로젝트 올려보기
+내 폴더에 접근하기(secondProject)
+	C:\>cd shine
+
+	C:\shine>cd gitProjects
+
+	C:\shine\gitProjects>cd secondProject
+
+	사진사 고용
+	C:\shine\gitProjects\secondProject>git init
+	Initialized empty Git repository in C:/shine/gitProjects/secondProject/.git/
+
+	사진찍기위해 모여봐~ 
+	C:\shine\gitProjects\secondProject>git add .
+	
+	수정해보기 (해당경로에 test파일 수정하고) 
+	사진찍기위해 모여바~ 
+	C:\shine\gitProjects\secondProject>git add .
+	
+	사진의 이름은 "third commit" 이야 ~ 
+	C:\shine\gitProjects\secondProject>git commit -m "third commit!"
+	
+	사진이 잘 찍혔는지 확인
+	C:\shine\gitProjects\secondProject>git log
+	commit fdd4226cf49e2020731f85b3fc4c9eb63c9414d7 (HEAD -> master)
+	Author: jjy961228 <jjy961228@naver.com>
+	Date:   Sun Mar 13 15:49:04 2022 +0900
+
+    		third commit!
+
+	commit 3cad59d4193c448c4278f76259a3e2e320d466ba
+	Author: jjy961228 <jjy961228@naver.com>
+	Date:   Sun Mar 13 15:46:25 2022 +0900
+
+   		 inital commit!
+	
+3. github와 연동하기
+	github 홈페이지에서 레퍼지토리 만들기(second project라고 만듬)
+	
+	second_project폴더와 연동시키기(git레퍼지토리만들고 거기서 복사해오면댐)
+	C:\shine\gitProjects\secondProject>git remote add origin https://github.com/jjy961228/second_Project.git
+
+	master 브렌치로 올리기
+	C:\shine\gitProjects\secondProject>git push origin master
+	
+	수정하고 다시올려보기
+	git add . 
+
+	git commit -m "fourth commit!"
+
+	git push origin master
+
+4. 내 컴퓨터 폴더에서 secondProject 삭제후 , github서버에서 폴더 받아오기
+github에서 해당 레포지토리에서 경로를 복사해온 후,
+내가 저장할 폴더에서 cmd창 키기기
+	
+	git clone 레퍼지토리 주소
+	git clone https://github.com/jjy961228/second_Project.git	
+
+	한줄 더 추가하고 github에 커밋해보기
+		원하는 폴더로 가기
+		cd second_Project
+
+		git add .
+		
+		git commit -m "5 test"
+
+		git push origin master
+
+5. 만약 github 홈페이지 자체에서 Read.me파일을 수정한 후 가져오려면 ?
+	
+	홈페이지에서 Readme 파일을 수정 후
+	C:\shine\gitProjects\second_Project>git pull origin master
+
+
+6. reset을 했을경우 다시 돌아가는 방법
+즉, "inital commit!" 으로 reset했을때 다시 "5 test"로 돌아가는 방법
+	
+	git log로 commit 상태 확인 
+	git log
+
+	inital commit! 으로 돌아가기(reset하기)
+	git reset hard --3cad59d4193c448c4278f76259a3e2e320d466ba
+	-->폴더를 확인해보면 아무것도 없는상태가 되었다~
+		하지만 , git홈페이지에서는 최신버전으로 되어있다		
+		이때는, git레포지토리 모두지우고 클론을 다시하던지
+		git홈페이지에서 second_project로 들어가 commit 코드를 복사해오는 방법이 있다 
+	git 홈페이지에서 commit 코드 복사해오기
+	레포지토리 들어가서 commit 시점보기 -> 커밋코드 확인 
+	->23094f50a0f65a72fb19cec00dc5dfa3727873dd 복사해오기
+
+	->C:\shine\gitProjects\second_Project>git reset --hard 23094f50a0f65a72fb19cec00dc5dfa3727873dd  이렇게해주면 폴더에서도  git 레포지토리와 똑같이 된다 ~ 
+
+	
+		
+
+	
+
+	
+
+	
+
+
+
+
+	
+	
+	
+
+	
+	
+	
+
+	

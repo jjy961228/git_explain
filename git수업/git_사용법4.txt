@@ -1,0 +1,24 @@
+쓸대없는 파일 안올리는 방법 : gitignore 이용
+
+inf_Deeplearning 파일을 예로들면
+1. 해당경로가서 gitignore.txt라는  text파일 만들기
+	exe로 끝나는 파일을 올리고싶지않다면 text파일에서 
+	*.exe 	입력
+	이뜻은 exe로 끝나는 파일은 github에 올리지마~ 라는뜻
+
+2. gitignore.txt 에서 확장자명 지우기 
+
+3. 깃허브에 올리기
+git init , 
+git status ,
+ git add .
+ git commit -m " " 
+ git remote add origin 레포지토리 주소
+ git push origin master 
+ 
+4. gitignore.io 홈페이지에가서 원하는 언어 선택 후,
+   나의 gitignore 만들어놓은곳에 붙여넣으면 더 쉽게 할 수 있다.
+
+
+
+	

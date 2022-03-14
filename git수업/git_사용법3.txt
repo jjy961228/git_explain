@@ -1,0 +1,14 @@
+노트북과 데스크탑 두개를 번갈아가면서 쓰고있을때
+
+컴퓨터1		      github		컴퓨터2
+add	  ->push		   	->	clone
+commit					
+					추가적인작업 후				
+	 <-pull			<-push	add
+					commit
+
+추가작업한후
+add	->push			->pull(clone은 이미 했으니까)	
+commit
+
+	

@@ -1,0 +1,103 @@
+cmd창 : git 에서 master라고 불리던 브랜치를 main이라고 이름을 바꿨다
+git config --global init.defalutBranch main    : 최초설치하고 1회만하면된다
+
+1. user name / user email 정하기
+
+user name :
+	git config --global user name. "Jang YoungJeon"
+
+user e-mail :
+	git config --global user name. "jjy961228@naver.com"
+
+git config --list : 내가 입력한 name, email 확인하는 방법
+	user.name=JangYoung Jeon
+	user.email=jjy961228@naver.com
+
+2. 해당 폴더로 들어가기
+dir : 폴더 조회
+cd: 들어가기
+cd . . : 뒤로가기
+mkdir : 폴더만들기
+
+C:\Users\jjy96>dir
+	C:\Users\jjy96: 해당경로의
+	dir : 폴더보기
+
+C:\Users\jjy96>cd Desktop 
+	C:\Users\jjy96 : 해당경로의
+	cd Desktop : Desktop 으로 들어가기 
+
+C:\Users\jjy96>cd .. 
+ 	해당경로에서 뒤로가기
+
+C:\Users\jjy96>mkdir hello 
+  	해당경로에 hello라는 폴더 만들기
+
+3. 파일올리기(사진찍고 올리기)
+git init : 사진사고용
+	C:\shine\gitProjects>git init
+
+git status : 사진찍을려고보니 test1, test 2 파일들 흩어져있다
+	C:\shine\gitProjects>git status 
+
+git add . : 사진찍게 모두 모여봐 ~ 	cf).은 모든파일을 의미한다
+
+git -m "inital commit!" : 사진을 찍을건데 사진의 이름은 " " 이다
+
+git log :  사진이 잘 찍혔는지 확인
+
+
+4.파일 수정하기
+아무파일이나 수정후에(test1) 
+
+사진찍게 모두 모여봐~
+	C:\shine\gitProjects\firstProject>git add .
+사진이 잘 찍혔는지 확인
+	C:\shine\gitProjects\firstProject>git log
+	commit 5be39ceed8a52fa974fc1c37224b03eef8dcef97 (HEAD -> master)
+	Author: JangYoung Jeon <jjy961228@naver.com>
+	Date:   Sun Mar 13 15:26:05 2022 +0900
+
+   		 modify one file!
+
+	commit ae9f2c8c438b1a2d2db3481fd517a60974f9aae5
+	Author: JangYoung Jeon <jjy961228@naver.com>
+	Date:   Sun Mar 13 15:21:56 2022 +0900
+
+   		 inital commit!
+
+5. 최초 상태로 돌아가보기 (inital commit! 상태)
+git reset --hard 이용
+
+inital commit 의 것을 복사한다 (ae9f2c8c438b1a2d2db3481fd517a60974f9aae5) 
+	C:\shine\gitProjects\firstProject>git reset --hard ae9f2c8c438b1a2d2db3481fd517a60974f9aae5
+	HEAD is now at ae9f2c8 inital commit!
+
+
+6. 여러개 수정하가 전상태로 돌아가기
+2개의 파일 수정한 후에 ,
+
+git commit  -m "modify two files"
+
+git commit -m "modify two files"
+
+git log
+
+마지막 커밋상태로 돌아가기
+C:\shine\gitProjects\firstProject>git reset --hard
+	HEAD is now at f7a4f30 modify files
+
+
+
+
+
+
+
+
+
+
+	 
+		
+
+
+
